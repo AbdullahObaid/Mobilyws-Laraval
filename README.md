@@ -25,14 +25,14 @@ open `app/config/app.php` and add the service provider and alias as below:
 
     'providers' => array(
         ...
-        Abdullahobaid\Mobilywslaraval\MobilywsProvider::class,
+        abdullahobaid\mobilywslaraval\MobilywsProvider::class,
     ),
     .
     .
     .
     'aliases' => array(
         ...
-        'Mobily'    => Abdullahobaid\Mobilywslaraval\Mobily::class,
+        'Mobily'    => abdullahobaid\mobilywslaraval\Mobily::class,
     ),
 
 
