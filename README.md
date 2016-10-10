@@ -16,6 +16,7 @@ A Laraval Package to send SMS using mobily.ws by using it's API and cURL. It use
 * Supports sending messages directly
 * Supports sending messages at a certain date/time
 * Supports sending messages to multiple numbers at once
+* `new` Supports any number format see [Usage](#usage)
 * Requires an active http://mobily.ws account 
 * cURL 
 * php >=5.3.0
@@ -60,6 +61,12 @@ return [
 
 
 ## Usage
+
+### Use any number format
+Mobily.ws requires the number to be formated as international number without trailing zeros, but this Package can handle differnt number formats.
+* You can pass a single number or array of numbers, see examples below.
+* The number can be sent with trailing zeros `00966555555555` or with trailing plus sign `+966555555555` or as international number without trailing zeros `966555555555` or even you can use the mobile number without international code - for Saudi Mobile Numbers Only - `0555555555` , the package will take care of formatting the number.
+
 ### Send SMS message directly
 Will send the message directly to the number
 ```php 
