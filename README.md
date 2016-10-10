@@ -1,6 +1,6 @@
 # Description
 
-A Laraval Package to send SMS using mobily.ws by using it's API and cURL.
+A Laraval Package to send SMS using mobily.ws by using it's API and cURL. It uses UTF-8 endconding for the SMS.
 
 ## Table of Contents
 
