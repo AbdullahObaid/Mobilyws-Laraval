@@ -1,5 +1,5 @@
 {
-    "name": "AbdullahObaid/Mobilyws-Laraval",
+    "name": "abdullah-obaid/mobilyws-laraval",
     "description": "A package to send SMS using Mobily.ws API",
     "license": "waqf",
     "type": "package",
@@ -18,7 +18,7 @@
     },
     "autoload": {
        "psr-4": {
-            "AbdullahObaid\\Mobilyws-Laraval\\": "src/"
+            "abdullah-obaid\\mobilyws-laraval\\": "src/"
         }
  
       },

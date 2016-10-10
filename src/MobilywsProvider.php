@@ -1,8 +1,8 @@
 <?php
-namespace AbdullahObaid\Mobilyws-Laraval;
+namespace abdullah-obaid\mobilyws-laraval;
 
 use Illuminate\Support\ServiceProvider;
-use AbdullahObaid\Mobilyws-Laraval\Mobily;
+use abdullah-obaid\mobilyws-laraval\Mobily;
 use Config;
 class MobilywsProvider extends ServiceProvider
 {
