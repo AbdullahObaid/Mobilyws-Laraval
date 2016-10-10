@@ -1,5 +1,5 @@
 <?php
-namespace abdullah-obaid\mobilyws-laraval;
+namespace abdullahobaid\mobilywslaraval;
 use App\Http\Controllers\Controller; 
 class Mobily extends Controller
 {

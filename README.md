@@ -19,27 +19,27 @@ A Laraval Package to send SMS using mobily.ws by using it's API and cURL.
 
 ## Installation
 
-Install with composer by running  `composer require AbdullahObaid/Mobilyws:dev-master`  
+Install with composer by running  `composer require abdullahobaid/mobilywslaraval:dev-master`  
 Composer will download and install the package. After the package is downloaded, 
 open `app/config/app.php` and add the service provider and alias as below:
 
     'providers' => array(
         ...
-        AbdullahObaid\Mobilyws\MobilywsProvider::class,
+        abdullahobaid\mobilywslaraval\MobilywsProvider::class,
     ),
     .
     .
     .
     'aliases' => array(
         ...
-        'Mobily'    => Mobilysms\AbdullahObaid\Mobily::class,
+        'Mobily'    => abdullahobaid\mobilywslaraval\Mobily::class,
     ),
 
 
 Publish the configuration file by running the following Artisan command.
 
 ```php
-$ php artisan config:publish AbdullahObaid/Mobilyws
+$ php artisan config:publish abdullahobaid/mobilywslaraval
 ```
 Finally, you need to edit the configuration file at  `config/mobilysms.php` with your own mobily.ws account info
 ```php 
