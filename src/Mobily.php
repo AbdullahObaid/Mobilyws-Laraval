@@ -43,6 +43,8 @@ public function Balance()
 public static function Send($numbers,$msg,$dateSend=0,$timeSend=0)
 {
 	static::run();
+	if(is_array($numbers))
+		$numbers = implode(',', $numbers);
     $url = "www.mobily.ws/api/msgSend.php";
     $applicationType = "68";  
 	$msgs         = $msg;
