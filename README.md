@@ -97,4 +97,3 @@ Waqf General Public Licens
 * [Laravel](https://laravel.com)
 * [Mobily.ws API Refrence](https://www.mobily.ws/en/api-scripts.html)
 * Follow me on Twitter [@mobde3](https://twitter.com/mobde3/)
-* This repo was originally a Fork of [this package](https://github.com/arabnewscms/mobilysms).
