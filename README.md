@@ -72,8 +72,8 @@ Returns `true` if the message is sent, `false` if not.
 ##### note
 * Date format `mm/dd/yyyy`
 * Time format `hh:mm:ss`
+ 
 ### Check the current Balance
-Will send the message in a desired date and time
 ```php 
 Mobily::Balance();
 ```
