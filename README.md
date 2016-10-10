@@ -69,7 +69,7 @@ Returns `true` if the message is sent, `false` if not.
 ### Send SMS to Multiple Numbers
 Pass an array of numbers instead of a single number to send to all of them
 ```php 
-$numbers = array('966555555555','966545555555','966565555555);
+$numbers = array('966555555555','966545555555','966565555555');
 Mobily::send(966555555555,'Your Message Here ');
 ```
 Returns `true` if the message is sent, `false` if not.
