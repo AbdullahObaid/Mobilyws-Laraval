@@ -68,11 +68,12 @@ Will send the message in a desired date and time
 ```php 
 Mobily::send(966555555555,'Your Message Here ',$date,$time);
 ```
-Returns `true` if the message is sent, `false` if not.
 ##### note
 * Date format `mm/dd/yyyy`
 * Time format `hh:mm:ss`
- 
+Returns `true` if the message is sent, `false` if not.
+
+
 ### Check the current Balance
 ```php 
 Mobily::Balance();
