@@ -48,7 +48,7 @@ public static function Send($numbers,$msg,$dateSend=0,$timeSend=0)
 	$msgs         = $msg;
     $sender       = urlencode(static::$sender);
     $domainName   = $_SERVER['SERVER_NAME'];
-    $stringToPost = "mobile=".static::$userAccount."&password=".static::$passAccount."&numbers=".$numbers."&sender=".$sender."&msg=".$msgs."&timeSend=".static::$timeSend."&dateSend=".static::$dateSend."&applicationType=".$applicationType."&domainName=".$url."&msgId=".static::$MsgID."&deleteKey=".static::$deleteKey."&lang=3";
+    $stringToPost = "mobile=".static::$userAccount."&password=".static::$passAccount."&numbers=".$numbers."&sender=".$sender."&msg=".$msgs."&timeSend=".$timeSend."&dateSend=".$dateSend."&applicationType=".$applicationType."&domainName=".$url."&msgId=".static::$MsgID."&deleteKey=".static::$deleteKey."&lang=3";
 
     $ch = curl_init();
     curl_setopt($ch, CURLOPT_URL, $url);
