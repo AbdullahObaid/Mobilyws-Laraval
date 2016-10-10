@@ -25,21 +25,21 @@ open `app/config/app.php` and add the service provider and alias as below:
 
     'providers' => array(
         ...
-        abdullahobaid\mobilywslaraval\MobilywsProvider::class,
+        Abdullahobaid\Mobilywslaraval\MobilywsProvider::class,
     ),
     .
     .
     .
     'aliases' => array(
         ...
-        'Mobily'    => abdullahobaid\mobilywslaraval\Mobily::class,
+        'Mobily'    => Abdullahobaid\Mobilywslaraval\Mobily::class,
     ),
 
 
 Publish the configuration file by running the following Artisan command.
 
 ```php
-$ php artisan config:publish abdullahobaid/mobilywslaraval
+$ php artisan vendor:publish
 ```
 Finally, you need to edit the configuration file at  `config/mobilysms.php` with your own mobily.ws account info
 ```php 
