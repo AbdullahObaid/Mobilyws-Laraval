@@ -49,7 +49,6 @@ class Mobily extends Controller
         $url = "www.mobily.ws/api/msgSend.php";
         $applicationType = "68";
         $sender = urlencode(static::$sender);
-        $domainName = $_SERVER['SERVER_NAME'];
         $stringToPost = "mobile=" . static::$userAccount . "&password=" . static::$passAccount . "&numbers=" . $numbers . "&sender=" . $sender . "&msg=" . $msg . "&timeSend=" . $timeSend . "&dateSend=" . $dateSend . "&applicationType=" . $applicationType . "&domainName=" . $url . "&msgId=" . static::$MsgID . "&deleteKey=" . static::$deleteKey . "&lang=3";
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, $url);
