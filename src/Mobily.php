@@ -26,7 +26,7 @@ class Mobily extends Controller
         static::$passAccount = config('mobilysms.password');
     }
 
-    public function Balance()
+    public static function Balance()
     {
         static::run();
         $url = "http://www.mobily.ws/api/balance.php";
