@@ -77,7 +77,7 @@ Returns `true` if the message is sent, `false` if not.
 Pass an array of numbers instead of a single number to send to all of them
 ```php 
 $numbers = array('966555555555','966545555555','966565555555');
-Mobily::send(966555555555,'Your Message Here ');
+Mobily::send($numbers,'Your Message Here ');
 ```
 Returns `true` if the message is sent, `false` if not.
 ### Send SMS message at a certain date/time
