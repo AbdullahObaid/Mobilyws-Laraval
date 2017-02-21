@@ -64,9 +64,13 @@ return [
 
 ### Use any number format
 Mobily.ws requires the number to be formated as international number without trailing zeros, but this Package can handle differnt number formats.
-* You can pass a single number or array of numbers, see examples below.
-* The number can be sent with trailing zeros `00966555555555` or with trailing plus sign `+966555555555` or as international number without trailing zeros `966555555555` or even you can use the mobile number without international code - for Saudi Mobile Numbers Only - `0555555555` , the package will take care of formatting the number.
 
+You can pass a single number or array of numbers, see examples below:
+
+* The number can be sent with trailing zeros 00966555555555 
+* With trailing plus sign +966555555555 
+* International number without trailing zeros 966555555555 
+* Even you can use the mobile number without international code - for Saudi Mobile Numbers Only - 0555555555 , the package will take care of formatting the number.
 ### Send SMS message directly
 Will send the message directly to the number
 ```php 
@@ -83,7 +87,7 @@ Returns `true` if the message is sent, `false` if not.
 ### Send SMS message at a certain date/time
 Will send the message in a desired date and time
 ```php 
-Mobily::send(966555555555,'Your Message Here ',$date,$time);
+Mobily::send(966555555555, 'Your Message Here', $date, $time);
 ```
 ##### note
 * Date format `mm/dd/yyyy`
