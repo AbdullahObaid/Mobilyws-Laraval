@@ -43,7 +43,7 @@ open `config/app.php` and add the service provider and alias as below:
 Publish the configuration file by running the following Artisan command.
 
 ```php
-$ php artisan vendor:publish -- provider="abdullahobaid\mobilywslaraval\MobilywsProvider"
+$ php artisan vendor:publish --provider="abdullahobaid\mobilywslaraval\MobilywsProvider"
 ```
 Finally, you need to edit the configuration file at  `config/mobilysms.php` with your own mobily.ws account info
 ```php 
