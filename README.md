@@ -74,14 +74,14 @@ You can pass a single number or array of numbers, see examples below:
 ### Send SMS message directly
 Will send the message directly to the number
 ```php 
-Mobily::send(966555555555,'Your Message Here ');
+Mobily::send(966555555555, 'Your Message Here');
 ```
 Returns `true` if the message is sent, `false` if not.
 ### Send SMS to Multiple Numbers
 Pass an array of numbers instead of a single number to send to all of them
 ```php 
 $numbers = array('966555555555','966545555555','966565555555');
-Mobily::send($numbers,'Your Message Here ');
+Mobily::send($numbers, 'Your Message Here');
 ```
 Returns `true` if the message is sent, `false` if not.
 ### Send SMS message at a certain date/time
