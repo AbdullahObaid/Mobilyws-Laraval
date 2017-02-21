@@ -48,13 +48,13 @@ $ php artisan vendor:publish --provider="abdullahobaid\mobilywslaraval\MobilywsP
 Finally, you need to edit the configuration file at  `config/mobilysms.php` with your own mobily.ws account info
 ```php 
 return [
-	'sender'  =>'', // Mobily.ws Sender Name
-	'mobile'  =>'', // Mobily.ws Account Mobile (Username)
-	'password'=>'', // Mobily.ws Password
-	'deleteKey'=>541235, 
-	'resultType'=>1,
-	'viewResult'=>1, 
-	'MsgID'=>rand(00000,99999), 
+    'sender'     => '', // Mobily.ws Sender Name
+    'mobile'     => '', // Mobily.ws Account Mobile (Username)
+    'password'   => '', // Mobily.ws Password
+    'deleteKey'  => 541235, 
+    'resultType' => 1,
+    'viewResult' => 1, 
+    'MsgID'      => rand(00000,99999), 
 ];
 
 ```
