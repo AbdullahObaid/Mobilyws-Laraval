@@ -25,7 +25,7 @@ A Laraval Package to send SMS using mobily.ws by using it's API and cURL. It use
 
 Install with composer by running  `composer require abdullahobaid/mobilywslaraval:dev-master`  
 Composer will download and install the package. After the package is downloaded, 
-open `app/config/app.php` and add the service provider and alias as below:
+open `config/app.php` and add the service provider and alias as below:
 
     'providers' => array(
         ...
@@ -43,18 +43,18 @@ open `app/config/app.php` and add the service provider and alias as below:
 Publish the configuration file by running the following Artisan command.
 
 ```php
-$ php artisan vendor:publish -- provider="abdullahobaid\mobilywslaraval\MobilywsProvider"
+$ php artisan vendor:publish --provider="abdullahobaid\mobilywslaraval\MobilywsProvider"
 ```
 Finally, you need to edit the configuration file at  `config/mobilysms.php` with your own mobily.ws account info
 ```php 
 return [
-	'sender'  =>'', // Mobily.ws Sender Name
-	'mobile'  =>'', // Mobily.ws Account Mobile (Username)
-	'password'=>'', // Mobily.ws Password
-	'deleteKey'=>541235, 
-	'resultType'=>1,
-	'viewResult'=>1, 
-	'MsgID'=>rand(00000,99999), 
+    'sender'     => '', // Mobily.ws Sender Name
+    'mobile'     => '', // Mobily.ws Account Mobile (Username)
+    'password'   => '', // Mobily.ws Password
+    'deleteKey'  => 541235, 
+    'resultType' => 1,
+    'viewResult' => 1, 
+    'MsgID'      => rand(00000,99999), 
 ];
 
 ```
@@ -64,26 +64,30 @@ return [
 
 ### Use any number format
 Mobily.ws requires the number to be formated as international number without trailing zeros, but this Package can handle differnt number formats.
-* You can pass a single number or array of numbers, see examples below.
-* The number can be sent with trailing zeros `00966555555555` or with trailing plus sign `+966555555555` or as international number without trailing zeros `966555555555` or even you can use the mobile number without international code - for Saudi Mobile Numbers Only - `0555555555` , the package will take care of formatting the number.
 
+You can pass a single number or array of numbers, see examples below:
+
+* The number can be sent with trailing zeros 00966555555555 
+* With trailing plus sign +966555555555 
+* International number without trailing zeros 966555555555 
+* Even you can use the mobile number without international code - for Saudi Mobile Numbers Only - 0555555555 , the package will take care of formatting the number.
 ### Send SMS message directly
 Will send the message directly to the number
 ```php 
-Mobily::send(966555555555,'Your Message Here ');
+Mobily::send(966555555555, 'Your Message Here');
 ```
 Returns `true` if the message is sent, `false` if not.
 ### Send SMS to Multiple Numbers
 Pass an array of numbers instead of a single number to send to all of them
 ```php 
 $numbers = array('966555555555','966545555555','966565555555');
-Mobily::send($numbers,'Your Message Here ');
+Mobily::send($numbers, 'Your Message Here');
 ```
 Returns `true` if the message is sent, `false` if not.
 ### Send SMS message at a certain date/time
 Will send the message in a desired date and time
 ```php 
-Mobily::send(966555555555,'Your Message Here ',$date,$time);
+Mobily::send(966555555555, 'Your Message Here', $date, $time);
 ```
 ##### note
 * Date format `mm/dd/yyyy`
