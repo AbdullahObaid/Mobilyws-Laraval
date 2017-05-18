@@ -100,6 +100,14 @@ Mobily::send(966555555555, 'Your Message Here', $date, $time);
 Mobily::Balance();
 ```
 Returns user's balance.
+
+### Get number of SMS messages a text requires
+
+```php 
+Mobily::count_messages($text);
+```
+
+
 ## License
 
 Waqf General Public Licens

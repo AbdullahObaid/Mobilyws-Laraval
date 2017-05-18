@@ -113,4 +113,13 @@ class Mobily extends Controller
         return $number;
     }
 
+    public static function count_messages($text)
+    {
+        $length = mb_strlen($text);
+        if ($length <= 70)
+            return 1;
+        else
+            return ceil($length / 67);
+    }
+
 }
