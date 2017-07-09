@@ -59,7 +59,10 @@ class Mobily extends Controller
         curl_setopt($ch, CURLOPT_POSTFIELDS, $stringToPost);
         $result = curl_exec($ch);
 
-        if ($result == 5) {
+        if ($result == 1) {
+            return true;
+        }
+        elseif ($result == 5) {
             return trans('mobily.wrondpassword');
         } elseif ($result == 4) {
             return trans('mobily.null_user_or_mobile');
@@ -85,8 +88,6 @@ class Mobily extends Controller
             return trans('mobily.service_stoped');
         } elseif ($result == 19) {
             return trans('mobily.app_error');
-        } elseif ($result == 1) {
-            return true;
         }
     }
 
