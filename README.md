@@ -107,6 +107,13 @@ Returns user's balance.
 Mobily::count_messages($text);
 ```
 
+### Override default sender name
+
+```php 
+Mobily::send(966555555555, 'Your Message Here', $date=0, $time=0,'Sender Name');
+```
+Note that the new sender should be registered and activate at mobily.ws website
+
 
 ## License
 

@@ -42,13 +42,16 @@ class Mobily extends Controller
         return $result;
     }
 
-    public static function Send($numbers, $msg, $dateSend = 0, $timeSend = 0)
+    public static function Send($numbers, $msg, $dateSend = 0, $timeSend = 0,$senderName=false)
     {
         static::run();
         $numbers = self::format_numbers($numbers);
         $url = "www.mobily.ws/api/msgSend.php";
         $applicationType = "68";
-        $sender = urlencode(static::$sender);
+		if($senderName)
+			$sender = urlencode($senderName);
+		else
+			$sender = urlencode(static::$sender);
         $stringToPost = "mobile=" . static::$userAccount . "&password=" . static::$passAccount . "&numbers=" . $numbers . "&sender=" . $sender . "&msg=" . $msg . "&timeSend=" . $timeSend . "&dateSend=" . $dateSend . "&applicationType=" . $applicationType . "&domainName=" . $url . "&msgId=" . static::$MsgID . "&deleteKey=" . static::$deleteKey . "&lang=3";
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, $url);
