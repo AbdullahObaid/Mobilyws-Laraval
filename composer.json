@@ -3,7 +3,7 @@
     "description": "A package to send SMS using Mobily.ws API",
     "license": "waqf",
     "type": "package",
-    "version":"1.5.0",
+    "version":"1.6.0",
     "keywords": ["laravel","mobily.ws"],
     "authors": [
         {
