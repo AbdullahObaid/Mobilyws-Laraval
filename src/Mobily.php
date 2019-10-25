@@ -109,11 +109,11 @@ class Mobily extends Controller
 
     public static function format_number($number)
     {
-        if (strlen($number) == 10 && Str::startWith($number, '05'))
+        if (strlen($number) == 10 && Str::startsWith($number, '05'))
             return preg_replace('/^0/', '966', $number);
-        elseif (Str::startWith($number, '00'))
+        elseif (Str::startsWith($number, '00'))
             return preg_replace('/^00/', '', $number);
-        elseif (Str::startWith($number, '+'))
+        elseif (Str::startsWith($number, '+'))
             return preg_replace('/^+/', '', $number);
         return $number;
     }
